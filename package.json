@@ -38,6 +38,7 @@
     "README.md"
   ],
   "scripts": {
+    "prepare": "npm run build",
     "build": "NODE_ENV=production rollup -c rollup.config.js",
     "build:dts": "api-extractor run --local --verbose",
     "dev": "webpack-dev-server --mode=development",
