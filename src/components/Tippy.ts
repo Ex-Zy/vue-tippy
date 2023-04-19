@@ -5,10 +5,10 @@ import tippy from 'tippy.js'
 
 declare module '@vue/runtime-core' {
   interface ComponentCustomProps extends TippyOptions {
-    to: string | Element
-    tag: string
-    contentTag: string
-    contentClass: string
+    to?: string | Element
+    tag?: string
+    contentTag?: string
+    contentClass?: string
   }
   interface ComponentCustomProperties extends UnwrapNestedRefs<ReturnType<typeof useTippy>> { }
 }
