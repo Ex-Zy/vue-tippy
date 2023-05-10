@@ -53,8 +53,8 @@ export function useTippy(
     let unwrappedContent: Content | VNode | { render: Function } = isRef(
       content
     )
-      ? content.value
-      : content
+      ? content.value as Content | VNode | { render: Function }
+      : content as Content | VNode | { render: Function }
 
     if (isVNode(unwrappedContent)) {
       if (vm) {
