@@ -50,7 +50,8 @@ export function useTippy(
   const getContent = (content: TippyContent): Content => {
     let newContent: Content
 
-    let unwrappedContent: Content | VNode | { render: Function } = isRef(
+    //@ts-ignore
+    let unwrappedContent: Content | VNode | { render: Function } = isRef<Content | VNode | { render: Function }>(
       content
     )
       ? content.value as Content | VNode | { render: Function }
